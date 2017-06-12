@@ -1,2 +1,3 @@
 # LingSheFM
 模仿喜马拉雅FM网站前端
+部署时直接导入Hbuilder，或者用其他IDE也可以

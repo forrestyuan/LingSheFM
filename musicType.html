@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/all.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/player.css" />
+	</head>
+	<body>
+		<!---------s:头部------------->
+		<header>
+			<div class="nav-top">
+				<a class="logo" href="explore.html"><img src="img/logo.png"/></a>
+				<div class="main_nav">
+					<!--s:主导航-->
+					<nav>
+						<ul>
+							<li><a href="">发现</a></li>
+							<li><a href="">我的</a></li>
+							<li><a href="">有声化</a></li>
+							<li><a href="">声音商城</a></li>
+						</ul>
+					</nav>
+					<!--e:主导航-->
+					<!--s:搜索-->
+					<div class="search">
+						<form action="" method="post">
+							<input id="seac" onblur="suggest_list_toggle();" onfocus="suggest_list_toggle();" type="text" placeholder="搜索声音、专辑、用户" name="search" autocomplete="off"/>
+							<button id="btn-seac" type="submit" class="btn glyphicon glyphicon-search"></button>
+						</form>
+						<div class="suggest-lsit">
+							<ul id="ul-suggest-list">
+								<li class="suggest-item">on day in 端午</li>
+								<li class="suggest-item">千年等一回</li>
+								<li class="suggest-item">渡情</li>
+								<li class="suggest-item">幻化人性</li>
+								<li class="suggest-item">西湖雨又风</li>
+								<li class="suggest-item">纠缠</li>
+							</ul>
+						</div>
+					</div>
+					<!--e:搜索-->
+				</div>
+				<!--s:上传-->
+				<div id="upload_wrap">
+					<div class="upload">
+						<div class="upload_btn" onclick="upload_list_toggle();">
+							<span class="glyphicon glyphicon-send"></span>
+							<span>上传</span>
+						</div>
+					</div>
+					<div id="upload_list">
+						<span id="arrowUP" class="glyphicon glyphicon-chevron-up"></span>
+						<a href="">
+							<span class="glyphicon glyphicon-chevron-down"></span><br/>
+							<span>主播V认证</span>
+						</a>
+						<a href="">
+							<span class="glyphicon glyphicon-stats"></span><br/>
+							<span>主播管理中心</span>
+						</a>
+						<a href="">
+							<span class="glyphicon glyphicon-send"></span><br/>
+							<span>上传声音</span>
+						</a>
+					</div>
+				</div>
+				<!--e:上传-->
+			</div>
+		</header>
+		<!---------e:头部------------->
+		
+		<!---------s:主体------------->
+		<div class="wrap_main">
+			<div id="sub_nav">
+				<ul class="ul_subnav">
+					<li><a href="explore.html">热门推荐</a></li>
+					<li><a class="active" href="javascript:void(0)">节目分类</a></li>
+					<li><a href="javascript:void(0);">声音广场</a></li>
+					<li><a href="javascript:void(0);">人气主播</a></li>
+				</ul>
+				<span><a onclick="showLogBig()" href="javascript:void(0);">登录|注册</a></span>
+			</div>
+			<!--s:主题区-->
+			<section class="main">
+				<!--主题-->
+				<!--侧边-->
+				<div class="main_aside">
+					<div id="inner">
+						<div class="allType">
+							<h3 align="center">声音分类</h3><hr/>
+							<ul align="center">
+
+								<li><a href="musictype?superTypeID=">热门推荐</a></li>
+								<li><a href="musictype?superTypeID=">日本为何没有</a></li>
+								<li><a href="musictype?superTypeID=">【国内要闻】</a></li>
+								<li><a href="musictype?superTypeID=">【国际风云】</a></li>
+								<li><a href="musictype?superTypeID=">【国际风云】</a></li>
+								<li><a href="musictype?superTypeID=">【国内要闻】</a></li>
+								<li><a href="musictype?superTypeID=">【国际风云】</a></li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+					
+				<div class="main_inner">
+					<div class="inner">
+						<div class="inner_body">
+							<ul class="inner_list">
+
+								<li>
+									<div class="list_item_top">
+										<div class="item_pic">
+											<a href="#">
+												<img src="img/recommond1.jpg" alt="十点读书" />
+												<span>subTypeName</span>
+											</a>
+											<a id="icon-play" name="SRC" onclick="playMusic(this.name);" href="javascript:void(0)"><i class="glyphicon glyphicon-expand"></i></a>
+										</div>
+										<a class="title" href="javascript:void(0)">musicName</a>
+										<a class="user-name" href="javscript:void(0)">by:username</a>
+									</div>
+									<p class="count-info">
+										<span><a href=""><i class="glyphicon glyphicon-play"></i>1000</a></span>
+										<span><a href=""><i class="glyphicon glyphicon-heart"></i>1000</a></span>
+										<span><a href=""><i class="glyphicon glyphicon-comment"></i>1000</a></span>
+									</p>
+								</li>
+
+								<li>
+									<div class="list_item_top">
+										<div class="item_pic">
+											<a href="#">
+												<img src="img/recommond1.jpg" alt="十点读书" />
+												<span>十点读书</span>
+											</a>
+											<a id="icon-play" name="music/左宏元 - 幻化人形 蛾眉上香 青城山下白素贞 四句箴言.mp3" onclick="playMusic(this.name);" href="javascript:void(0)"><i class="glyphicon glyphicon-expand"></i></a>
+										</div>
+										<a class="title" href="">主播玮玮：性格不好，其实就是情商不</a>
+										<a class="user-name" href="">by：十点读书</a>
+									</div>
+									<p class="count-info">
+										<span><a href=""><i class="glyphicon glyphicon-play"></i>1000</a></span>
+										<span><a href=""><i class="glyphicon glyphicon-heart"></i>1000</a></span>
+										<span><a href=""><i class="glyphicon glyphicon-comment"></i>1000</a></span>
+									</p>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--e:主题区-->
+		</div>
+		<!----------e:主体------------->
+		<!--s:音乐播放器区-->
+		<div class="music_panle">
+			<audio id="audio_player" src="music/FORMOSA - 前世今生.mp3" preload="metadata" controls="controls" class="player" >
+				您的浏览器不支持 audio 标签。
+			</audio>
+			<span class="songInfo">
+				<a id="song_name" href="javascript:void(0);">歌曲名:</a>
+			</span>
+			<span class="album">
+				<img id="album_img" src="img/recommond2.jpg"/>
+				<span id="playState" class="glyphicon glyphicon-play"></span>
+			</span>
+			<span id="btn_pullout_panel" >
+				<i class="glyphicon glyphicon-chevron-right"></i>
+			</span>
+		</div>
+		<!--e:音乐播放器区-->
+		<!--s:登录区-->
+		<div class="zhezhaoceng">
+			<div class="login_wrap">
+				<div class="closeLog" align="right"><i id="closeLog" class="glyphicon glyphicon-remove"></i></div>
+				<div class="logo_wrap">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="log_by_third">
+					<h4 align="center">——使用第三方登录——</h4>
+					<ul>
+						<li><a href="" class="icon3 icon3-qq"></a></li>
+						<li><a href="" class="icon3 icon3-weibo"></a></li>
+						<li><a href="" class="icon3 icon3-weixin"></a></li>
+						<li><a href="" class="icon3 icon3-tieba"></a></li>
+					</ul>
+				</div>
+				<div class="log_by_linshe">
+					<h4 align="center">——使用灵蛇FM账号登录——</h4>
+						<form action="" method="post">
+							<input type="text" name="username" id="username" placeholder="邮箱或手机号"/>
+							<input type="password" name="password" id="password" placeholder="密码" />
+							<input type="submit" value="登录"/>
+						</form>
+						<div>
+							<p>没有账号？<a href="">注册！</a></p>
+						</div>
+				</div>
+			</div>
+		</div>
+		<!--e:登录区-->
+		<!---------s:脚部------------->
+		<footer>
+		 	<div align="center" class="footer-wrap">
+		 		<div><!--兴趣关注-->
+		 			<h4>欢迎关注：</h4>
+			 		<ul>
+			 			<li><a href=""><i class="icon3 icon3-weibo"></i>官方微博</a></li>
+			 			<li><a href=""><i class="icon3 icon3-weixin"></i>官方微信</a></li>
+			 			<li><a href=""><i class="icon3 icon3-qq"></i>客服QQ</a></li>
+			 			<li><a href=""><i class="icon3 icon3-contact"></i>联系我们</a></li>
+			 			<li><a href=""><i class="icon3 icon3-tieba"></i>贴吧</a></li>
+			 			<li><a href=""><i class="icon3 icon3-xingqu"></i>兴趣部落</a></li>
+			 		</ul>
+		 		</div>
+		 		<div> <!--简介-->
+		 			<p>
+		 				灵蛇FM，听你想听，给你精彩。解放你的眼睛，解放你的双手，用你的耳朵，聆听您的心灵，释放自我，享受自我.<br>
+		 				在这个喧嚣的社会，静下心来聆听自我，你可以做声音的主人，只需加入我们的声音主播，你的声音便会传遍天下，<br>
+		 				彼此间倾听各自的内心深处的声音。让我们一起享受灵蛇FM带给我们的每一天的精彩.
+		 			</p>
+		 		</div>
+		 		<div><!--版权声明-->
+					<ul>
+						<li><a href="about.html">关于我们</a>&nbsp;|</li>
+						<li><a href="">招贤纳士</a>&nbsp;|</li>
+						<li><a href="">版权声明</a>&nbsp;|</li>
+						<li><a href="">使用协议</a>&nbsp;|</li>
+						<li><a href="">公司新闻</a>&nbsp;|</li>
+						<li><a href="">举报中心</a></li>
+					</ul>
+					<p> Copyright ©2016 www.wangke.com lnc.ALL Rights Reserved</p>
+					<P><b>深圳网客科技有限公司</b>版权所有 -14240018-POWER BY YUANFUCONG</p>
+				</div>
+		 	</div>
+		</footer>
+		<!---------e:脚部------------->
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/player.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

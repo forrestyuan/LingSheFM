@@ -1,0 +1,78 @@
+div.music_panle{
+				position: relative;
+				display: inline-block;
+				width:500px;
+				height: 63px;
+				border: 1px solid #EAEAEA;
+				background-color: white;
+				box-shadow: 0 2px 3px 3px #ccc;
+				border-radius: 0 90px 90px 0 ;
+				background-color: rgba(0,0,0,0.8);
+				
+			}
+			audio.player{
+				height:40px;
+				width: 350px;
+				position: absolute;
+				left: 0;
+				top:5px;
+			}
+			span.songInfo{
+				display: inline-block;
+				position: absolute;
+				right: 60px;
+				width:430px;
+				height:20px;
+			}
+			span.songInfo a{display: inline-block;width:100%;color: white;overflow: hidden;font-size:5px;}
+			span.album{
+				display: inline-block;
+				width:60px;
+				height: 60px;
+				position: absolute;
+				right: 0;
+				background-color: aquamarine;
+				border-radius:180px;
+				z-index: 1000px;
+			}
+			span.album:hover{cursor: pointer;}
+			span.album span{
+				position: absolute;
+				display: inline-block;
+				font-size: 35px;
+				top: 10px;
+				right: 10px;
+			}
+			span.album img{width: 60px;height: 60px;border-radius:180px;}
+			span#btn_pullout_panel{
+				position: absolute;
+				width: 15px;
+				height:50px;
+				top:5px;
+				right: -20px;
+				color: #737373;
+				font-size:16px;
+				background-color: white;
+				box-shadow: 0 2px 3px 3px #ccc;
+				text-align: center;
+				vertical-align: middle;
+			}
+			span#btn_pullout_panel:hover{cursor: pointer;}
+			span#btn_pullout_panel i{top:15px;}
+			@keyframes circle{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+			@-moz-keyframes circle{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+			@-ms-keyframes circle{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+			@-webkit-keyframes circle{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+			.run{-webkit-animation: circle 5s infinite linear;-webkit-animation-play-state: running;}

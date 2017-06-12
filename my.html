@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/all.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/player.css" />
+	</head>
+	<body>
+		<!---------s:头部------------->
+		<header>
+			<div class="nav-top">
+				<a class="logo" href="explore.html"><img src="img/logo.png"/></a>
+				<div class="main_nav">
+					<!--s:主导航-->
+					<nav>
+						<ul>
+							<li><a href="">发现</a></li>
+							<li><a href="">我的</a></li>
+							<li><a href="">有声化</a></li>
+							<li><a href="">声音商城</a></li>
+						</ul>
+					</nav>
+					<!--e:主导航-->
+					<!--s:搜索-->
+					<div class="search">
+						<form action="" method="post">
+							<input id="seac" onblur="suggest_list_toggle();" onfocus="suggest_list_toggle();" type="text" placeholder="搜索声音、专辑、用户" name="search" autocomplete="off"/>
+							<button id="btn-seac" type="submit" class="btn glyphicon glyphicon-search"></button>
+						</form>
+						<div class="suggest-lsit">
+							<ul id="ul-suggest-list">
+								<li class="suggest-item">on day in 端午</li>
+								<li class="suggest-item">千年等一回</li>
+								<li class="suggest-item">渡情</li>
+								<li class="suggest-item">幻化人性</li>
+								<li class="suggest-item">西湖雨又风</li>
+								<li class="suggest-item">纠缠</li>
+							</ul>
+						</div>
+					</div>
+					<!--e:搜索-->
+				</div>
+				<!--s:上传-->
+				<div id="upload_wrap">
+					<div class="upload">
+						<div class="upload_btn" onclick="upload_list_toggle();">
+							<span class="glyphicon glyphicon-send"></span>
+							<span>上传</span>
+						</div>
+					</div>
+					<div id="upload_list">
+						<span id="arrowUP" class="glyphicon glyphicon-chevron-up"></span>
+						<a href="">
+							<span class="glyphicon glyphicon-chevron-down"></span><br/>
+							<span>主播V认证</span>
+						</a>
+						<a href="">
+							<span class="glyphicon glyphicon-stats"></span><br/>
+							<span>主播管理中心</span>
+						</a>
+						<a href="">
+							<span class="glyphicon glyphicon-send"></span><br/>
+							<span>上传声音</span>
+						</a>
+					</div>
+				</div>
+				<!--e:上传-->
+			</div>
+		</header>
+		<!---------e:头部------------->
+		
+		<!---------s:主体------------->
+		<div class="wrap_main">
+			<!--s:主题区-->
+			<section class="main">
+				<div class="owner_head">
+					<div class="owner_bg"><img src="img/mycenter_bg_4.jpg"/></div>
+					<div class="owner_zhezhao">
+						<div class="my_head_info">
+							<div class="my_head_pic">
+								<img src="img/head.jpg"/>
+							</div> 
+							<div class="my_name_word">
+								<h2>ForrestYuan10</h2>
+								<p>有缘千里来相会，无缘对面手难牵。</p>
+							</div>
+							<div class="my_head_count_info">
+								<span>粉丝：0</span>
+								<span>关注：0</span>
+								<span>赞过：0</span>
+								<span>评论：0</span>
+								<span>声音：0</span>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="owner_body">
+							<div class="up_body">
+								<ul>
+									<li><a href="#sec1">我的声音</a></li>
+									<li><a href="#sec2">我的消息</a></li>
+									<li><a href="#sec3">账号设置</a></li>
+								</ul>
+							</div>
+							<div class="down_body">
+								<section id="sec1" class="mysound">
+									<div class="listSound">
+										
+									</div>
+									<div class="uploadSound">
+										
+									</div>
+								</section>
+								<section id="sec2" class="mynews">
+									<div class="comment">
+										
+									</div>
+								</section>
+								<section id="sec3" class="myaccount">
+									
+								</section>
+							</div>
+						</div>
+			</section>
+			<!--e:主题区-->
+		</div>
+		<!----------e:主体------------->
+		<!--s:音乐播放器区-->
+		<div class="music_panle">
+			<audio id="audio_player" src="music/FORMOSA - 前世今生.mp3" preload="metadata" controls="controls" class="player" >
+				您的浏览器不支持 audio 标签。
+			</audio>
+			<span class="songInfo">
+				<a href="">歌曲名:</a>
+				<a href="">专辑：</a>
+				<a href="">作者：</a>
+			</span>
+			<span class="album">
+				<img id="album_img" src="img/recommond2.jpg"/>
+				<span id="playState" class="glyphicon glyphicon-play"></span>
+			</span>
+			<span id="btn_pullout_panel" >
+				<i class="glyphicon glyphicon-chevron-right"></i>
+			</span>
+		</div>
+		<!--e:音乐播放器区-->
+		<!---------s:脚部------------->
+		<footer>
+		 	<div align="center" class="footer-wrap">
+		 		<div><!--兴趣关注-->
+		 			<h4>欢迎关注：</h4>
+			 		<ul>
+			 			<li><a href=""><i class="icon3 icon3-weibo"></i>官方微博</a></li>
+			 			<li><a href=""><i class="icon3 icon3-weixin"></i>官方微信</a></li>
+			 			<li><a href=""><i class="icon3 icon3-qq"></i>客服QQ</a></li>
+			 			<li><a href=""><i class="icon3 icon3-contact"></i>联系我们</a></li>
+			 			<li><a href=""><i class="icon3 icon3-tieba"></i>贴吧</a></li>
+			 			<li><a href=""><i class="icon3 icon3-xingqu"></i>兴趣部落</a></li>
+			 		</ul>
+		 		</div>
+		 		<div> <!--简介-->
+		 			<p>
+		 				灵蛇FM，听你想听，给你精彩。解放你的眼睛，解放你的双手，用你的耳朵，聆听您的心灵，释放自我，享受自我.<br>
+		 				在这个喧嚣的社会，静下心来聆听自我，你可以做声音的主人，只需加入我们的声音主播，你的声音便会传遍天下，<br>
+		 				彼此间倾听各自的内心深处的声音。让我们一起享受灵蛇FM带给我们的每一天的精彩.
+		 			</p>
+		 		</div>
+		 		<div><!--版权声明-->
+					<ul>
+						<li><a href="about.html">关于我们</a>&nbsp;|</li>
+						<li><a href="">招贤纳士</a>&nbsp;|</li>
+						<li><a href="">版权声明</a>&nbsp;|</li>
+						<li><a href="">使用协议</a>&nbsp;|</li>
+						<li><a href="">公司新闻</a>&nbsp;|</li>
+						<li><a href="">举报中心</a></li>
+					</ul>
+					<p> Copyright ©2016 www.wangke.com lnc.ALL Rights Reserved</p>
+					<P><b>深圳网客科技有限公司</b>版权所有 -14240018-POWER BY YUANFUCONG</p>
+				</div>
+		 	</div>
+		</footer>
+		<!---------e:脚部------------->
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/player.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
